@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Font-Myriad";
+  src: url("/assets/fonts/MyriadPro-Regular.otf");
+}
+@font-face {
+  font-family: "Font-Warfare";
+  src: url("/assets/fonts/ModernWarfare.ttf");
+}
+
+body {
+  font-family: "Font-Myriad", sans-serif;
+  font-size: 1rem;
+  color: white;
+  font-weight: 400;
+  background: #151515;
+}
+
+.title_text {
+  font-family: "Font-Warfare", sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 59.82px;
+  text-align: center;
+}
+
+.about_section {
+  background-image: url("/assets/arts/about_banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.about_section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    #151515 17.26%,
+    rgba(21, 21, 21, 0.75) 43.97%,
+    #151515 95.09%
+  );
+}
+
+.join_section {
+  background-image: url("/assets/arts/join_art.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.join_section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    #151515 1.22%,
+    rgba(50, 49, 49, 0) 135.22%
+  );
+}
