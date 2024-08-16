@@ -4,6 +4,7 @@ import FeatureSection from "./FeatureSection";
 import VideoSection from "./VideoSection";
 import AboutUsSection from "./AboutUsSection";
 import JoinSection from "./JoinSection";
+import MoreSection from "./MoreSection";
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <HeroSection />
       <VideoSection />
       <AboutUsSection />
+      <MoreSection />
       <FeatureSection />
       <JoinSection />
     </React.Fragment>

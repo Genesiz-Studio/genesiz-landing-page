@@ -3,15 +3,6 @@ import CardTypeOne from "@/components/Card";
 import React from "react";
 
 const FeatureSection = () => {
-  var settings = {
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    speed: 500,
-    centerPadding: "60px",
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   const ListFeature = [
     {
       title: "Web3 gears",
@@ -27,9 +18,10 @@ const FeatureSection = () => {
     },
   ];
   return (
-    <div>
+    <div className="container mx-auto">
       <p className="title_text">Gameplay features</p>
-      <div className="slider-container">
+
+      <div className="mt-9">
         {ListFeature.map((item, index) => (
           <CardTypeOne
             title={item.title}

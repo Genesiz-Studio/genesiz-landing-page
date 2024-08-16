@@ -6,14 +6,20 @@ interface IProps {
 }
 const CardTypeOne = ({ title, description, image }: IProps) => {
   return (
-    <div className="border rounded-2xl border-[#3F6104">
+    <div className="overflow-hidden border rounded-2xl border-[#3F6104] ">
       <div
+        className="relative"
         style={{
           backgroundImage: `url(${image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "438px",
+          width: "777px",
         }}
-      ></div>
-      <div>
-        <p>{title}</p>
+      >
+        <p className="title_text absolute left-6 bottom-5"> {title}</p>
+      </div>
+      <div className="border  border-[#82C708] hidden">
         <p>{description}</p>
       </div>
     </div>
