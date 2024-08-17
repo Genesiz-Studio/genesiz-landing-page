@@ -5,11 +5,11 @@ import MapArt from "@/public/assets/arts/map_art.svg";
 import AboutArt from "@/public/assets/arts/about_art.svg";
 const AboutUsSection = () => {
   return (
-    <div className="py-[142px] about_section">
+    <div className="py-[142px] about_section px-4">
       <div className="container mx-auto ">
         <div className="flex flex-col gap-8 items-center ">
           <p
-            className="font-font_warface text-[52px] line-clamp-2 text-center max-w-[695px] z-10 "
+            className="font-font_warface title_text text-[52px] text-center max-w-[695px] z-10 "
             style={{
               textShadow: "0px 0px 16px  #82C7088C",
             }}
@@ -34,11 +34,11 @@ const AboutUsSection = () => {
           unfold, where strategy, skill, and survival instincts will determine
           the fate of the world.`}
             </p>
-            <div className="flex justify-end">
+            <div className="flex justify-end max-md:hidden">
               <AboutTopArt_2 />
             </div>
           </div>
-          <AboutArt className="z-10" />
+          <AboutArt className="z-10 max-md:hidden" />
         </div>
       </div>
     </div>

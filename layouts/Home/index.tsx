@@ -8,14 +8,14 @@ import MoreSection from "./MoreSection";
 
 const HomePage = () => {
   return (
-    <React.Fragment>
+    <div className="max-w-[1440px] mx-auto">
       <HeroSection />
       <VideoSection />
       <AboutUsSection />
       <MoreSection />
       <FeatureSection />
       <JoinSection />
-    </React.Fragment>
+    </div>
   );
 };
 

@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#82C708"
+      },
       fontFamily: {
         font_warface: ["Font-Warfare", "sans-serif"],
       },

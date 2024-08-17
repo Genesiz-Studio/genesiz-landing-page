@@ -1,11 +1,15 @@
+"use client";
 import React from "react";
 import LogoIcon from "@/public/assets/icons/logo.svg";
-import Image from "next/image";
+import { IoIosMenu } from "react-icons/io";
+import { usePopupNavigator } from "@/app/hooks/usePopupNavigator";
 interface ListProps {
   title: string;
   href: string;
 }
 const Header = () => {
+  const { showPopupNavigator } = usePopupNavigator();
+
   const ListNavigation: ListProps[] = [
     {
       title: "Characters",
@@ -24,8 +28,8 @@ const Header = () => {
     <header className=" py-4 sticky top-0 border-b border-[#82C708] bg-[#151515] z-[90]">
       <div className="mx-auto container">
         <div className="flex items-center w-full justify-between">
-          <nav className="">
-            <ul className="flex ">
+          <nav className="max-md:hidden">
+            <ul className="flex">
               {ListNavigation.map((item, index) => (
                 <li key={index}>
                   <a
@@ -40,7 +44,7 @@ const Header = () => {
               ))}
             </ul>
           </nav>
-          <div className="flex gap-4 items-center">
+          <div className="flex gap-4 max-md:gap-2 items-center">
             <LogoIcon className="h-10" />
 
             <div>
@@ -49,9 +53,15 @@ const Header = () => {
               </p>
             </div>
           </div>
-          <button className="border border-[#82C708] py-1 px-6 shadow-primary uppercase bg-[#151515">
-            Join waitlist
-          </button>
+          <div className="flex gap-2">
+            <button className="border border-[#82C708] py-1 px-6 max-md:px-4 shadow-primary uppercase bg-[#151515]">
+              <p>Join waitlist</p>
+            </button>
+            <IoIosMenu
+              onClick={() => showPopupNavigator()}
+              className="text-white text-3xl md:hidden cursor-pointer"
+            />
+          </div>
         </div>
       </div>
     </header>

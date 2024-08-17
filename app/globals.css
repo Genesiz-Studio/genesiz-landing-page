@@ -69,3 +69,41 @@ body {
     rgba(50, 49, 49, 0) 135.22%
   );
 }
+
+@media screen and (max-width: 768px) {
+  .title_text {
+    font-size: 32px;
+    line-height: 36.91px;
+  }
+  
+}
+
+@keyframes slide-to-left {
+  0% {
+    transform: translate(100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-to-right {
+  0% {
+    transform: translate(0%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100%, 0);
+    opacity: 0;
+  }
+}
+
+.animate-slide-to-left {
+  animation: slide-to-left 500ms forwards;
+}
+
+.animate-slide-to-right {
+  animation: slide-to-right 500ms forwards;
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import ProviderApp from "@/providers/ProviderApp";
+import { PopupNavigatorProvider } from "@/app/hooks/usePopupNavigator";
 
 export const metadata: Metadata = {
   title: "Genesiz | Ghost City",
@@ -16,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ProviderApp>{children}</ProviderApp>
+        <PopupNavigatorProvider>
+          <ProviderApp>{children}</ProviderApp>
+        </PopupNavigatorProvider>
       </body>
     </html>
   );

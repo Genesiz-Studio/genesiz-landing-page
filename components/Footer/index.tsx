@@ -47,7 +47,7 @@ const Footer = () => {
         }}
       />
       <div className="container mx-auto">
-        <div className="flex justify-between py-[52px]">
+        <div className="flex justify-between py-[52px] px-4 max-md:flex-col gap-4">
           <div className="flex gap-4 items-center">
             <LogoIcon className="h-[62px] w-[61px]" />
             <div>
@@ -58,13 +58,13 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-4">
-            <ul className="flex gap-4">
+            <ul className="flex gap-4 max-md:flex-col">
               {ListFooterNav.map((item, index) => (
                 <li key={index}>
                   <a
                     href={item.href}
                     className={` text-sm uppercase ${
-                      index != 0 && "border-l border-[#FFFFFF80] pl-4"
+                      index != 0 && "md:border-l border-[#FFFFFF80] md:pl-4"
                     }`}
                   >
                     {item.title}
