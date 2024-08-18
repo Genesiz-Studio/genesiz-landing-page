@@ -6,7 +6,7 @@ interface IProps {
 }
 const CardTypeOne = ({ title, description, image }: IProps) => {
   return (
-    <div className="overflow-hidden border rounded-2xl border-[#3F6104] min-w-[779px] max-lg:min-w-[500px] max-md:min-w-[350px] aspect-video group relative">
+    <div className="overflow-hidden border rounded-2xl border-[#3F6104] min-w-[779px] max-lg:min-w-[500px] max-md:min-w-[350px] aspect-video group relative hover:shadow-card">
       <div className="w-full h-full bg-gradient-to-r from-black/40 to-black/20 z-[1] absolute hidden top-0 left-0 group-hover:block transition-all"></div>
       <div className="w-full h-full bg-gradient-to-r from-primary/20 to-primary/10 z-[1] absolute hidden top-0 left-0 group-hover:block transition-all "></div>
       <div

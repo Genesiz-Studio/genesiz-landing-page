@@ -17,6 +17,7 @@ const config: Config = {
       backgroundImage: {},
       boxShadow: {
         primary: `0px 4px 12px 0px #82C70840 inset, 0px -4px 12px 0px #82C70840 inset`,
+        card: `0px 8px 32px 0px #82C7088C`,
       },
     },
   },
