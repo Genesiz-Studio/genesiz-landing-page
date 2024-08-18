@@ -8,7 +8,7 @@ const CardTypeOne = ({ title, description, image }: IProps) => {
   return (
     <div className="overflow-hidden border rounded-2xl border-[#3F6104] min-w-[779px] max-lg:min-w-[500px] max-md:min-w-[350px] aspect-video group relative">
       <div className="w-full h-full bg-gradient-to-r from-black/40 to-black/20 z-[1] absolute hidden top-0 left-0 group-hover:block transition-all"></div>
-      <div className="w-full h-full bg-gradient-to-r from-primary/20 to-primary/10 z-[1] absolute hidden top-0 left-0 group-hover:block transition-all"></div>
+      <div className="w-full h-full bg-gradient-to-r from-primary/20 to-primary/10 z-[1] absolute hidden top-0 left-0 group-hover:block transition-all "></div>
       <div
         className="relative"
         style={{
@@ -25,9 +25,6 @@ const CardTypeOne = ({ title, description, image }: IProps) => {
         <p className="text-xl max-w-[80%] text-start left-6 absolute top-28 max-md:top-20 hidden group-hover:block group-hover:z-[1]">
           {description}
         </p>
-      </div>
-      <div className="border border-[#82C708] hidden">
-        <p>{description}</p>
       </div>
     </div>
   );

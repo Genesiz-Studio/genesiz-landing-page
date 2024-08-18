@@ -9,14 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#82C708"
+        primary: "#82C708",
       },
       fontFamily: {
         font_warface: ["Font-Warfare", "sans-serif"],
       },
       backgroundImage: {},
       boxShadow: {
-        primary: `0px 4px 12px 0px #82C70840 inset,0px -4px 12px 0px #82C70840 inset`,
+        primary: `0px 4px 12px 0px #82C70840 inset, 0px -4px 12px 0px #82C70840 inset`,
       },
     },
   },

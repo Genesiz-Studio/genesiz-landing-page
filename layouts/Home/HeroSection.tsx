@@ -3,7 +3,7 @@ import HeroArtArrow from "@/public/assets/arts/hero_art_shape.svg";
 
 const HeroSection = () => {
   return (
-    <div className="container mx-auto mt-[120px] mb-[36px] px-4">
+    <div className="container mx-auto mt-[52px] mb-[36px] px-4">
       <div className="flex justify-around max-md:flex-col">
         <div className="flex items-center max-md:justify-center">
           <HeroArtArrow className="max-md:hidden" />
@@ -17,7 +17,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="flex items-center max-md:justify-center">
-          <p className="text-center md:line-clamp-3 w-[497px] text-sm max-md:mt-5">
+          <p className="text-center md:line-clamp-3 w-[497px] text-[#FFFFFFBF] text-sm max-md:mt-5 leading-[20px]">
             {`In the aftermath of a devastating global conflict, two factions
             clash for control of a critical laboratory that holds the key to the
             world's future. Choose your side, master your arsenal, and fight for

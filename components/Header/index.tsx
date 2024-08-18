@@ -48,7 +48,7 @@ const Header = () => {
             <LogoIcon className="h-10" />
 
             <div>
-              <p className="font-font_warface text-lg">
+              <p className="font-font_warface text-lg leading-[16px]">
                 Genesiz <br /> Ghost City
               </p>
             </div>

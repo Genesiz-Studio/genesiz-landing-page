@@ -24,7 +24,10 @@ const MoreSection = () => {
         alt=""
         className="w-full h-auto absolute top-0 left-0 -z-[1] border-b border-primary"
       />
-      <p className="title_text">Choose your path Genesiz or Final coalition</p>
+      <p className="title_text">
+        Choose your path <br />
+        Genesiz or Final coalition
+      </p>
       <p className="text-lg mt-9">
         As a warrior in this dystopian battlefield, you must decide your
         allegiance:

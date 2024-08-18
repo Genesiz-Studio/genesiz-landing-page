@@ -3,27 +3,28 @@ import TwitterIcon from "@/public/assets/icons/twitter.svg";
 import DiscordIcon from "@/public/assets/icons/discord.svg";
 import LogoIcon from "@/public/assets/icons/logo.svg";
 import Image from "next/image";
+import Link from "next/link";
 const Footer = () => {
   const ListFooterNav = [
     {
       title: "legal",
-      href: "/legal",
+      href: "#",
     },
     {
       title: "terms of use",
-      href: "/terms-of-use",
+      href: "#",
     },
     {
       title: "Privacy policy",
-      href: "/privacy-policy",
+      href: "#",
     },
     {
       title: "cookie policy",
-      href: "/cookie-policy",
+      href: "#",
     },
     {
       title: "support",
-      href: "/support",
+      href: "#",
     },
   ];
   const ListSocial = [
@@ -51,7 +52,7 @@ const Footer = () => {
           <div className="flex gap-4 items-center">
             <LogoIcon className="h-[62px] w-[61px]" />
             <div>
-              <p className="font-font_warface text-[28.68px] leading-normal">
+              <p className="font-font_warface text-[28.68px] leading-[28px]">
                 Genesiz <br /> Ghost City
               </p>
             </div>
@@ -72,14 +73,18 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            {/* <ul className="flex gap-4">
+            <ul className="flex gap-4 justify-end">
               {ListSocial.map((item, index) => (
-                <li key={index} className="relative">
-                  <div className="bg-white rounded-full h-8 w-8 absolute left-0 top-0 -z-10"></div>
-                  {<item.icon className="h-6 w-6 z-10 absolute left-0" />}
-                </li>
+                <Link
+                  href={item.href}
+                  target="_blank"
+                  key={index}
+                  className="relative hover:opacity-80"
+                >
+                  {<item.icon className="h-6 w-6 " />}
+                </Link>
               ))}
-            </ul> */}
+            </ul>
           </div>
         </div>
         <div className="py-[52px] border-t border-[#FFFFFF26] flex flex-col items-center gap-4">
