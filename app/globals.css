@@ -75,7 +75,6 @@ body {
     font-size: 32px;
     line-height: 36.91px;
   }
-  
 }
 
 @keyframes slide-to-left {
@@ -106,4 +105,94 @@ body {
 
 .animate-slide-to-right {
   animation: slide-to-right 500ms forwards;
+}
+/* Setting Carousel*/
+.embla {
+  /* max-width: 1440px; */
+  margin: auto;
+  --slide-height: 438px;
+  --slide-spacing: 1rem;
+  --slide-size: 80%;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .embla {
+    --slide-size: 100%; /* Slide size for mobile devices */
+    --slide-spacing: 2rem;
+  }
+}
+
+.embla::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  background: linear-gradient(
+    90deg,
+    rgba(21, 21, 21, 0) 30.89%,
+    #151515 93.07%
+  );
+  top: 0;
+  right: 0;
+}
+
+.embla__viewport {
+  /* overflow: hidden; */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  overflow-y: hidden; /* Hides vertical scrolling */
+  scrollbar-width: thin; /* For Firefox, makes the scrollbar thin */
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}
+
+.embla__controls {
+  /* display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between; */
+  /* gap: 1.2rem; */
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: center;
+}
+.embla__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+.embla__dot {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #3f6104;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 52px;
+  height: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.embla__dot--selected {
+  background-color: #82c708;
+  box-shadow: inset 0 0 0 0.2rem var(--text-body);
 }

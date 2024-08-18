@@ -1,5 +1,7 @@
 "use client";
 import CardTypeOne from "@/components/Card";
+import EmblaCarousel from "@/components/Slider/EmblaCarousel";
+import { OPTIONS_EMBLA } from "@/utils/constants";
 import React from "react";
 
 const FeatureSection = () => {
@@ -32,17 +34,24 @@ const FeatureSection = () => {
   return (
     <div className="text-center py-[92px]">
       <p className="title_text">Gameplay features</p>
-      <div className="cotaniner mx-auto">
-        <div className="flex gap-4 mt-[84px] px-[134px] max-md:px-10 overflow-auto">
-          {ListFeature.map((item, index) => (
-            <CardTypeOne
-              title={item.title}
-              description={item.description}
-              image={item.image}
-              key={`Card-More-${index}`}
-            />
-          ))}
-        </div>
+      <div className="mt-[84px] cotaniner mx-auto px-0 ">
+        <EmblaCarousel
+          options={OPTIONS_EMBLA}
+          slides={
+            <React.Fragment>
+              {ListFeature.map((item, index) => (
+                <div className="embla__slide" key={`Card-Feature-${index}`}>
+                  <CardTypeOne
+                    title={item.title}
+                    description={item.description}
+                    image={item.image}
+                    key={`Card-More-${index}`}
+                  />
+                </div>
+              ))}
+            </React.Fragment>
+          }
+        />
       </div>
     </div>
   );

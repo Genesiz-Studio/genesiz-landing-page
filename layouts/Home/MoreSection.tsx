@@ -1,7 +1,9 @@
 import CardTypeOne from "@/components/Card";
 import React from "react";
 import bg_more_section from "@/public/assets/arts/bg-more-section.png";
-
+import EmblaCarousel from "@/components/Slider/EmblaCarousel";
+import { EmblaOptionsType } from "embla-carousel";
+import { OPTIONS_EMBLA } from "@/utils/constants";
 const MoreSection = () => {
   const ListSection = [
     {
@@ -17,6 +19,7 @@ const MoreSection = () => {
       image: "/assets/arts/art_1.png",
     },
   ];
+
   return (
     <div className="text-center py-[92px] relative">
       <img
@@ -32,17 +35,24 @@ const MoreSection = () => {
         As a warrior in this dystopian battlefield, you must decide your
         allegiance:
       </p>
-      <div className="cotaniner mx-auto">
-        <div className="flex gap-4 mt-[84px] px-[134px] max-md:px-10 overflow-auto">
-          {ListSection.map((item, index) => (
-            <CardTypeOne
-              title={item.title}
-              description={item.description}
-              image={item.image}
-              key={`Card-More-${index}`}
-            />
-          ))}
-        </div>
+
+      <div className="mt-[84px] cotaniner mx-auto px-0 ">
+        <EmblaCarousel
+          options={OPTIONS_EMBLA}
+          slides={
+            <React.Fragment>
+              {ListSection.map((item, index) => (
+                <div className="embla__slide" key={`Card-More-${index}`}>
+                  <CardTypeOne
+                    title={item.title}
+                    description={item.description}
+                    image={item.image}
+                  />
+                </div>
+              ))}
+            </React.Fragment>
+          }
+        />
       </div>
     </div>
   );

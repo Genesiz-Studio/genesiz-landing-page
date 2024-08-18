@@ -8,7 +8,7 @@ import MoreSection from "./MoreSection";
 
 const HomePage = () => {
   return (
-    <div className="max-w-[1440px] mx-auto">
+    <div>
       <HeroSection />
       <VideoSection />
       <AboutUsSection />
