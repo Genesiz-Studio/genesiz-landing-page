@@ -25,7 +25,7 @@ const Header = () => {
     },
   ];
   return (
-    <header className=" py-4 sticky top-0 border-b border-[#82C708] bg-[#151515] z-[90] shadow-card">
+    <header className="py-4 sticky top-0 border-b border-[#82C708] bg-[#151515] z-[90] shadow-card">
       <div className="mx-auto container">
         <div className="flex items-center w-full justify-between">
           <nav className="max-md:hidden flex-1">
@@ -53,7 +53,7 @@ const Header = () => {
               </p>
             </div>
           </div>
-          <div className="flex gap-2 flex-1 justify-end">
+          <div className="flex gap-2 flex-1 justify-end pr-4">
             <button className="border border-[#82C708] py-1 px-6 max-md:px-4 shadow-primary uppercase bg-[#151515]">
               <p>Join waitlist</p>
             </button>
