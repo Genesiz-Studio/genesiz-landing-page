@@ -10,6 +10,7 @@ type UseDotButtonType = {
   selectedIndex: number;
   scrollSnaps: number[];
   onDotButtonClick: (index: number) => void;
+  setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
 };
 
 export const useDotButton = (
@@ -46,6 +47,7 @@ export const useDotButton = (
     selectedIndex,
     scrollSnaps,
     onDotButtonClick,
+    setSelectedIndex,
   };
 };
 

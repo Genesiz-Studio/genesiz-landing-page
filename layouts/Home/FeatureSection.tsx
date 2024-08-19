@@ -37,20 +37,21 @@ const FeatureSection = () => {
       <div className="mt-[84px] cotaniner mx-auto px-0 ">
         <EmblaCarousel
           options={OPTIONS_EMBLA}
-          slides={
-            <React.Fragment>
-              {ListFeature.map((item, index) => (
-                <div className="embla__slide" key={`Card-Feature-${index}`}>
-                  <CardTypeOne
-                    title={item.title}
-                    description={item.description}
-                    image={item.image}
-                    key={`Card-More-${index}`}
-                  />
-                </div>
-              ))}
-            </React.Fragment>
-          }
+          slides={ListFeature}
+          // slides={
+          //   <React.Fragment>
+          //     {ListFeature.map((item, index) => (
+          //       <div className="embla__slide" key={`Card-Feature-${index}`}>
+          //         <CardTypeOne
+          //           title={item.title}
+          //           description={item.description}
+          //           image={item.image}
+          //           key={`Card-More-${index}`}
+          //         />
+          //       </div>
+          //     ))}
+          //   </React.Fragment>
+          // }
         />
       </div>
     </div>

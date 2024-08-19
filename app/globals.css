@@ -112,7 +112,7 @@ body {
   margin: auto;
   --slide-height: 438px;
   --slide-spacing: 1rem;
-  --slide-size: 80%;
+  --slide-size: 70%;
   position: relative;
 }
 @media (max-width: 768px) {
@@ -134,13 +134,14 @@ body {
   );
   top: 0;
   right: 0;
+  pointer-events: none;
 }
 
 .embla__viewport {
   /* overflow: hidden; */
   overflow-x: auto; /* Enables horizontal scrolling */
   overflow-y: hidden; /* Hides vertical scrolling */
-  scrollbar-width: thin; /* For Firefox, makes the scrollbar thin */
+  /* scrollbar-width: 5px; For Firefox, makes the scrollbar thin */
 }
 
 .embla__container {
@@ -195,4 +196,24 @@ body {
 .embla__dot--selected {
   background-color: #82c708;
   box-shadow: inset 0 0 0 0.2rem var(--text-body);
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Width of the entire scrollbar */
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888888; /* Scrollbar thumb (handle) color */
+  border-radius: 6px; /* Roundness of the scroll thumb */
+  border: 3px solid #3f6104; /* Padding around the thumb */
+  margin-top: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border: 3px solid rgb(131, 204, 4);
 }

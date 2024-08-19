@@ -3,9 +3,16 @@ import React from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import useEmblaCarousel from "embla-carousel-react";
+import CardTypeOne from "../Card";
+
+type SlideProps = {
+  title: string;
+  description: string;
+  image: string;
+};
 
 type PropType = {
-  slides: React.ReactNode;
+  slides: Array<SlideProps>;
   options?: EmblaOptionsType;
 };
 
@@ -13,19 +20,36 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+  const { selectedIndex, scrollSnaps, onDotButtonClick, setSelectedIndex } =
     useDotButton(emblaApi);
+
+  const handleMouseEnter = (index: number) => {
+    if (emblaApi) {
+      emblaApi.scrollTo(index);
+      setSelectedIndex(index);
+      return;
+    }
+  };
 
   return (
     <section className="embla">
-      <div className="embla__viewport " ref={emblaRef}>
+      <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {/* {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
-            </div>
-          ))} */}
-          {slides}
+          <React.Fragment>
+            {slides.map((item, index) => (
+              <div
+                className="embla__slide"
+                key={`Card-More-${index}`}
+                // onMouseEnter={() => handleMouseEnter(index)}
+              >
+                <CardTypeOne
+                  title={item.title}
+                  description={item.description}
+                  image={item.image}
+                />
+              </div>
+            ))}
+          </React.Fragment>
         </div>
       </div>
 

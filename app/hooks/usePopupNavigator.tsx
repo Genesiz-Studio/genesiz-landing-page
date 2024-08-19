@@ -9,7 +9,6 @@ import {
   useState,
 } from "react";
 import { IoCloseSharp } from "react-icons/io5";
-import { TbLogout } from "react-icons/tb";
 
 interface PopupNavigatorContextType {
   showPopupNavigator: () => void;

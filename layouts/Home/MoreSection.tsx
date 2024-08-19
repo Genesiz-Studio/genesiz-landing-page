@@ -2,21 +2,19 @@ import CardTypeOne from "@/components/Card";
 import React from "react";
 import bg_more_section from "@/public/assets/arts/bg-more-section.png";
 import EmblaCarousel from "@/components/Slider/EmblaCarousel";
-import { EmblaOptionsType } from "embla-carousel";
 import { OPTIONS_EMBLA } from "@/utils/constants";
 const MoreSection = () => {
   const ListSection = [
     {
-      title: "Genesiz",
+      title: "Final coalition",
       description:
-        "Collect, customize, and master a diverse arsenal of NFT weapons and gear",
-      image: "/assets/arts/art_1.png",
+        "Attack with relentless force to dismantle Genesiz's ambitions and ensure the survival of the human race as it once was.",
+      image: "/assets/arts/art_6.png",
     },
     {
-      title: "Genesiz up",
-      description:
-        "Collect, customize, and master a diverse arsenal of NFT weapons and gear",
-      image: "/assets/arts/art_1.png",
+      title: "Genesiz",
+      description: `Defend the vision of a new, enhanced humanity. Protect the Neo-Adam project and prove the superiority of your superhuman brethren.`,
+      image: "/assets/arts/art_7.png",
     },
   ];
 
@@ -39,19 +37,20 @@ const MoreSection = () => {
       <div className="mt-[84px] cotaniner mx-auto px-0 ">
         <EmblaCarousel
           options={OPTIONS_EMBLA}
-          slides={
-            <React.Fragment>
-              {ListSection.map((item, index) => (
-                <div className="embla__slide" key={`Card-More-${index}`}>
-                  <CardTypeOne
-                    title={item.title}
-                    description={item.description}
-                    image={item.image}
-                  />
-                </div>
-              ))}
-            </React.Fragment>
-          }
+          slides={ListSection}
+          // slides={
+          //   <React.Fragment>
+          //     {ListSection.map((item, index) => (
+          //       <div className="embla__slide" key={`Card-More-${index}`}>
+          //         <CardTypeOne
+          //           title={item.title}
+          //           description={item.description}
+          //           image={item.image}
+          //         />
+          //       </div>
+          //     ))}
+          //   </React.Fragment>
+          // }
         />
       </div>
     </div>
