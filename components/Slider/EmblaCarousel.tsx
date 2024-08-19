@@ -20,6 +20,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [timeOutId, setTimeOutId] = useState<NodeJS.Timeout | null>(null);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick, setSelectedIndex } =
     useDotButton(emblaApi);
@@ -34,10 +35,14 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
   const handleScroll = () => {
     setIsScrolling(true);
-    setTimeout(() => setIsScrolling(false), 1000);
+    if (timeOutId) {
+      clearTimeout(timeOutId);
+    }
+    const timeOut = setTimeout(() => {
+      setIsScrolling(false);
+    }, 1000);
+    setTimeOutId(timeOut);
   };
-
-  useEffect(() => {}, [emblaRef]);
 
   return (
     <section className="embla">
@@ -51,7 +56,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             <div
               className="embla__slide"
               key={`Card-More-${index}`}
-              onMouseEnter={() => handleMouseEnter(index)}
+              // onMouseEnter={() => handleMouseEnter(index)}
             >
               <CardTypeOne
                 title={item.title}
