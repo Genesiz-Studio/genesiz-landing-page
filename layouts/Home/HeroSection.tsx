@@ -27,11 +27,11 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="mb-[36px] md:mt-[-73px] relative">
+    <div className="md:mt-[-73px] relative">
       <div className="rounded-md overflow-hidden relative">
         <div className="flex gap-6 justify-around items-center absolute z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <HeroArtArrow className="max-lg:hidden scale-y-125" />
-          <div className="flex flex-col justify-center">
+          <HeroArtArrow className="max-lg:hidden scale-y-150" />
+          <div className="flex flex-col justify-center -mt-2">
             <div className="flex items-center justify-center">
               <div className="text-left">
                 <div className="font-font_warface title_text text-center bg-gradient-to-r from-[#80BF10] via-[#95FF32] to-[#82C708] bg-clip-text text-transparent whitespace-nowrap flex gap-x-2 max-sm:flex-col">
@@ -51,7 +51,7 @@ const HeroSection = () => {
               </p>
             </div>
           </div>
-          <HeroArtArrow className="rotate-180 max-lg:hidden scale-y-125" />
+          <HeroArtArrow className="rotate-180 max-lg:hidden scale-y-150" />
         </div>
         <div className="absolute z-20 bottom-10 right-10 max-sm:bottom-2 max-sm:right-2 flex gap-2">
           <div
@@ -85,13 +85,14 @@ const HeroSection = () => {
         </div>
         <video
           ref={videoRef}
-          className="brightness-[35%] md:w-screen md:h-screen object-cover"
+          className="md:w-screen md:h-screen object-cover"
           src="assets/videos/the_genesiz.mp4"
           autoPlay
           loop
           playsInline
           muted
         />
+        <div className="bg-gradient-to-b from-transparent via-transparent to-[#151515] z-10 w-full h-full absolute top-0 left-0"></div>
       </div>
       <div className="flex justify-center items-center mt-8">
         <p className="text-center w-[497px] text-[#FFFFFFBF] text-sm max-md:mt-5 leading-[20px] sm:hidden">

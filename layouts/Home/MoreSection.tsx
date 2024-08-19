@@ -35,23 +35,7 @@ const MoreSection = () => {
       </p>
 
       <div className="mt-[84px] cotaniner mx-auto px-0 ">
-        <EmblaCarousel
-          options={OPTIONS_EMBLA}
-          slides={ListSection}
-          // slides={
-          //   <React.Fragment>
-          //     {ListSection.map((item, index) => (
-          //       <div className="embla__slide" key={`Card-More-${index}`}>
-          //         <CardTypeOne
-          //           title={item.title}
-          //           description={item.description}
-          //           image={item.image}
-          //         />
-          //       </div>
-          //     ))}
-          //   </React.Fragment>
-          // }
-        />
+        <EmblaCarousel options={OPTIONS_EMBLA} slides={ListSection} />
       </div>
     </div>
   );

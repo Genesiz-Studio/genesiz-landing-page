@@ -48,7 +48,7 @@ body {
   width: 100%;
   background: linear-gradient(
     180deg,
-    #151515 17.26%,
+    #151515 5.26%,
     rgba(21, 21, 21, 0.75) 43.97%,
     #151515 95.09%
   );
@@ -146,7 +146,6 @@ body {
   /* overflow: hidden; */
   overflow-x: auto; /* Enables horizontal scrolling */
   overflow-y: hidden; /* Hides vertical scrolling */
-  /* scrollbar-width: 5px; For Firefox, makes the scrollbar thin */
 }
 
 .embla__container {
@@ -208,17 +207,16 @@ body {
   height: 6px;
 }
 
-::-webkit-scrollbar-track {
-  background: transparent; /* Background of the scrollbar track */
-}
+/* ::-webkit-scrollbar-track {
+  background: transparent; 
+} */
 
 ::-webkit-scrollbar-thumb {
-  background-color: #888888; /* Scrollbar thumb (handle) color */
-  border-radius: 6px; /* Roundness of the scroll thumb */
-  border: 3px solid #3f6104; /* Padding around the thumb */
-  margin-top: 4px;
+  background-color: transparent; 
+  border-radius: 6px; 
+  border: 3px solid transparent; 
 }
 
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   border: 3px solid rgb(131, 204, 4);
-}
+} */
