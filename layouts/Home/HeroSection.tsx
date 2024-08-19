@@ -53,17 +53,17 @@ const HeroSection = () => {
           </div>
           <HeroArtArrow className="rotate-180 max-lg:hidden scale-y-125" />
         </div>
-        <div className="absolute z-20 bottom-10 right-10 flex gap-2">
+        <div className="absolute z-20 bottom-10 right-10 max-sm:bottom-2 max-sm:right-2 flex gap-2">
           <div
             onClick={() => {
               videoRef.current!.muted = !videoRef.current!.muted;
             }}
-            className="h-10 aspect-square grid place-items-center border border-gray-400 text-gray-400 rounded cursor-pointer"
+            className="h-10 max-sm:h-6 aspect-square grid place-items-center border border-gray-400 text-gray-400 rounded cursor-pointer"
           >
             {isMuted ? (
-              <HiMiniSpeakerXMark className="text-2xl" />
+              <HiMiniSpeakerXMark className="sm:text-2xl" />
             ) : (
-              <HiMiniSpeakerWave className="text-2xl" />
+              <HiMiniSpeakerWave className="sm:text-2xl" />
             )}
           </div>
           <div
@@ -74,12 +74,12 @@ const HeroSection = () => {
                 videoRef.current!.play();
               }
             }}
-            className="h-10 aspect-square grid place-items-center border border-gray-400 text-gray-400 rounded cursor-pointer"
+            className="h-10 max-sm:h-6 aspect-square grid place-items-center border border-gray-400 text-gray-400 rounded cursor-pointer"
           >
             {isPlaying ? (
-              <IoMdPause className="text-2xl" />
+              <IoMdPause className="sm:text-2xl" />
             ) : (
-              <IoMdPlay className="text-2xl" />
+              <IoMdPlay className="sm:text-2xl" />
             )}
           </div>
         </div>
