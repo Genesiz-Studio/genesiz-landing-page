@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import useEmblaCarousel from "embla-carousel-react";
@@ -20,7 +20,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const [isScrolling, setIsScrolling] = useState(false);
-  const [timeOutId, setTimeOutId] = useState<NodeJS.Timeout | null>(null);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick, setSelectedIndex } =
     useDotButton(emblaApi);
@@ -33,21 +32,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     }
   };
 
-  const handleScroll = () => {
-    setIsScrolling(true);
-    if (timeOutId) {
-      clearTimeout(timeOutId);
-    }
-    const timeOut = setTimeout(() => {
-      setIsScrolling(false);
-    }, 1000);
-    setTimeOutId(timeOut);
-  };
-
   return (
     <section className="embla">
       <div
-        onScroll={handleScroll}
+        onMouseEnter={() => setIsScrolling(true)}
+        onMouseLeave={() => setIsScrolling(false)}
         className={`embla__viewport ${isScrolling ? "scrolling" : ""}`}
         ref={emblaRef}
       >

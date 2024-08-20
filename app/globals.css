@@ -117,7 +117,7 @@ body {
   margin: auto;
   --slide-height: 438px;
   --slide-spacing: 1rem;
-  --slide-size: 70%;
+  --slide-size: 60%;
   position: relative;
 }
 @media (max-width: 768px) {
@@ -213,12 +213,16 @@ body {
   border: 3px solid transparent; 
 }
 
-.scrolling::-webkit-scrollbar {
-  height: 6px;
+@media screen and (min-width: 768px) {
+  .scrolling::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .scrolling::-webkit-scrollbar-thumb {
+    background-color: #3f6104; 
+    border-radius: 6px; 
+    border: 3px solid #3f6104;
+  }
+  
 }
 
-.scrolling::-webkit-scrollbar-thumb {
-  background-color: #3f6104; 
-  border-radius: 6px; 
-  border: 3px solid #3f6104;
-}
