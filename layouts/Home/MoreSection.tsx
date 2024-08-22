@@ -1,8 +1,7 @@
-import CardTypeOne from "@/components/Card";
 import React from "react";
 import bg_more_section from "@/public/assets/arts/bg-more-section.png";
 import EmblaCarousel from "@/components/Slider/EmblaCarousel";
-import { OPTIONS_EMBLA } from "@/utils/constants";
+
 const MoreSection = () => {
   const ListSection = [
     {
@@ -35,7 +34,7 @@ const MoreSection = () => {
       </p>
 
       <div className="mt-[84px] cotaniner mx-auto px-0 ">
-        <EmblaCarousel options={OPTIONS_EMBLA} slides={ListSection} />
+        <EmblaCarousel slides={ListSection} />
       </div>
     </div>
   );

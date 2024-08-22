@@ -53,7 +53,7 @@ const HeroSection = () => {
           </div>
           <HeroArtArrow className="rotate-180 max-lg:hidden scale-y-150" />
         </div>
-        <div className="absolute z-20 bottom-10 right-10 max-sm:bottom-2 max-sm:right-2 flex gap-2">
+        {/* <div className="absolute z-20 bottom-10 right-10 max-sm:bottom-2 max-sm:right-2 flex gap-2">
           <div
             onClick={() => {
               videoRef.current!.muted = !videoRef.current!.muted;
@@ -82,8 +82,8 @@ const HeroSection = () => {
               <IoMdPlay className="sm:text-2xl" />
             )}
           </div>
-        </div>
-        <video
+        </div> */}
+        {/* <video
           ref={videoRef}
           className="md:w-screen md:h-screen object-cover"
           src="assets/videos/the_genesiz.mp4"
@@ -91,7 +91,18 @@ const HeroSection = () => {
           loop
           playsInline
           muted
-        />
+        /> */}
+
+        <iframe
+          width="1038"
+          height="584"
+          src="https://www.youtube.com/embed/YNB38sB2rhE?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&loop=1&origin=https://genesiz-landing-page.vercel.app&playlist=YNB38sB2rhE"
+          title="The Genesiz"
+          frameBorder="0"
+          className="md:w-screen md:h-screen object-cover"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
         <div className="bg-gradient-to-b from-transparent via-transparent to-[#151515] z-10 w-full h-full absolute top-0 left-0"></div>
       </div>
       <div className="flex justify-center items-center mt-8">

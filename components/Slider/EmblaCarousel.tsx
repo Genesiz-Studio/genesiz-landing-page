@@ -4,6 +4,7 @@ import { EmblaOptionsType } from "embla-carousel";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import useEmblaCarousel from "embla-carousel-react";
 import CardTypeOne from "../Card";
+import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 
 type SlideProps = {
   title: string;
@@ -13,12 +14,18 @@ type SlideProps = {
 
 type PropType = {
   slides: Array<SlideProps>;
-  options?: EmblaOptionsType;
 };
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const { slides } = props;
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      dragFree: true,
+      containScroll: false,
+      loop: false,
+    },
+    [WheelGesturesPlugin()]
+  );
   const [isScrolling, setIsScrolling] = useState(false);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick, setSelectedIndex } =

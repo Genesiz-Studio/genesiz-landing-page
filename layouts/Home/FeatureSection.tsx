@@ -36,7 +36,6 @@ const FeatureSection = () => {
       <p className="title_text">Gameplay features</p>
       <div className="mt-[84px] cotaniner mx-auto px-0 ">
         <EmblaCarousel
-          options={OPTIONS_EMBLA}
           slides={ListFeature}
           // slides={
           //   <React.Fragment>
