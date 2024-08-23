@@ -13,15 +13,15 @@ const Header = () => {
   const ListNavigation: ListProps[] = [
     {
       title: "Characters",
-      href: "/characters",
+      href: "/",
     },
     {
       title: "Weapons",
-      href: "/weapons",
+      href: "/",
     },
     {
       title: "Blog",
-      href: "/blog",
+      href: "/",
     },
   ];
   return (
@@ -44,15 +44,17 @@ const Header = () => {
               ))}
             </ul>
           </nav>
-          <div className="flex gap-4 max-md:gap-2 md:justify-center flex-1">
-            <LogoIcon className="h-10" />
+          <a href="/">
+            <div className="flex gap-4 max-md:gap-2 md:justify-center flex-1">
+              <LogoIcon className="h-10" />
 
-            <div>
-              <p className="font-font_warface text-lg leading-[16px]">
-                Genesiz <br /> Ghost City
-              </p>
+              <div>
+                <p className="font-font_warface text-lg leading-[16px]">
+                  Genesiz <br /> Ghost City
+                </p>
+              </div>
             </div>
-          </div>
+          </a>
           <div className="flex gap-2 flex-1 justify-end pr-4">
             <button className="border border-[#82C708] py-1 px-6 max-md:px-4 shadow-primary uppercase bg-[#151515]">
               <p>Join waitlist</p>
