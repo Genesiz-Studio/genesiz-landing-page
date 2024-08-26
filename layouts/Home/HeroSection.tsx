@@ -102,7 +102,7 @@ const HeroSection = () => {
           className="md:w-screen md:h-screen object-cover"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-        ></iframe>
+        />
         <div className="bg-gradient-to-b from-transparent via-transparent to-[#151515] z-10 w-full h-full absolute top-0 left-0"></div>
       </div>
       <div className="flex justify-center items-center mt-8">

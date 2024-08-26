@@ -22,7 +22,7 @@ const CardTypeOne = ({ title, description, image }: IProps) => {
         <p className="title_text max-md:text-2xl absolute left-6 top-[80%] group-hover:top-10 transition-all group-hover:z-[1] duration-700">
           {title}
         </p>
-        <p className="text-xl max-w-[80%] text-start left-6 absolute top-28 max-md:top-20 hidden group-hover:block group-hover:z-[1]">
+        <p className="text-xl max-w-[80%] text-start left-6 absolute top-[90%] group-hover:top-28 max-md:top-20 opacity-0 group-hover:opacity-100 group-hover:z-[1] duration-700 transition-all">
           {description}
         </p>
       </div>

@@ -96,9 +96,9 @@ const Footer = () => {
           />
           <div className="max-w-[554px]">
             <p className="line-clamp-2 text-[#FFFFFF80] text-center text-sm">
-              © 2024 Genesiz, Inc. GENESIZ: GHOST CITY, and RICOCHET ANTI-CHEAT
-              are trademarks of Genesiz, Inc. All other trademarks and trade
-              names are the property of their respective owners.
+              © 2024 Genesiz, Inc. GENESIZ: GHOST CITY, are trademarks of
+              Genesiz, Inc. All other trademarks and trade names are the
+              property of their respective owners.
             </p>
           </div>
         </div>
