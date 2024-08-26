@@ -96,13 +96,13 @@ const HeroSection = () => {
         <iframe
           width="1038"
           height="584"
-          src="https://www.youtube.com/embed/YNB38sB2rhE?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&loop=1&origin=https://genesiz-landing-page.vercel.app&playlist=YNB38sB2rhE"
+          src="https://www.youtube.com/embed/YNB38sB2rhE?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&loop=1&playlist=YNB38sB2rhE"
           title="The Genesiz"
           frameBorder="0"
           className="md:w-screen md:h-screen object-cover"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-        />
+        ></iframe>
         <div className="bg-gradient-to-b from-transparent via-transparent to-[#151515] z-10 w-full h-full absolute top-0 left-0"></div>
       </div>
       <div className="flex justify-center items-center mt-8">
